@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
-import { sendMessageToGemini } from "@/app/actions/chat";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface Message {
@@ -36,14 +35,34 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const history = messages.map((msg) => ({
-        role: msg.role,
-        parts: [{ text: msg.text }],
-      }));
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  {
+                    text: `You are a professional assistant on Polad Balakishiyev's portfolio. Respond to: ${userMessage}`
+                  }
+                ]
+              }
+            ]
+          })
+        }
+      );
 
-      const response = await sendMessageToGemini(userMessage, history);
-      setMessages((prev) => [...prev, { role: "model", text: response }]);
+      const data = await response.json();
+      console.log("Gemini API Data:", data);
+      
+      const reply = data.candidates[0].content.parts[0].text;
+      setMessages((prev) => [...prev, { role: "model", text: reply }]);
     } catch (error) {
+      console.error("Gemini Error:", error);
       setMessages((prev) => [
         ...prev,
         { 
