@@ -57,7 +57,7 @@ export default function AboutSection() {
         <div className="md:col-span-9 md:pt-8">
           <div className="mb-8">
             <span className="about-line text-[10px] tracking-[0.3em] text-white/25 uppercase block mb-6">
-              {t.about.title} / {t.nav.about}
+              Haqqımda / About
             </span>
           </div>
 

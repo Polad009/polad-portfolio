@@ -99,9 +99,6 @@ export default function ContactSection() {
           <span className="text-[10px] tracking-[0.2em] text-white/15 uppercase">
             {t.footer.copyright}
           </span>
-          <span className="text-[10px] tracking-[0.2em] text-white/10 uppercase">
-            {t.footer.madeWith}
-          </span>
         </div>
       </div>
     </section>

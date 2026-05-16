@@ -9,7 +9,7 @@ export const az = {
   hero: {
     greeting: "Salam, mən",
     name: "Polad Balakişiyev",
-    role: "AI Dəstəkli Data Analitika & Frontend Developer",
+    role: "Data Analitika & Frontend Developer",
     tagline: "Məlumatları qərarlara çevirirəm.",
     cta: "İşlərimi Gör",
     scrollHint: "Kəşf etmək üçün sürüşdürün",
@@ -100,6 +100,6 @@ export const az = {
   },
   footer: {
     copyright: "© 2026 Polad Balakişiyev",
-    madeWith: "Next.js & Framer Motion ilə qurulub",
+    madeWith: "",
   },
 };

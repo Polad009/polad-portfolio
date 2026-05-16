@@ -76,7 +76,7 @@ export default function HeroSection() {
           style={{ fontFamily: "var(--font-display)" }}
         >
           {t.hero.name.split(" ").map((word, i) => (
-            <div key={i} className="overflow-hidden inline-block mr-[0.2em]">
+            <div key={i} className="overflow-hidden inline-block mr-[0.3em] last:mr-0">
               <span className="word-reveal inline-block">{word}</span>
             </div>
           ))}
