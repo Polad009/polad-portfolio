@@ -78,8 +78,6 @@ export const en = {
           "React",
           "Next.js",
           "Tailwind CSS",
-          "Node.js",
-          "MongoDB",
         ],
       },
       {

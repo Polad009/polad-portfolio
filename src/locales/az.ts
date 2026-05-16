@@ -78,8 +78,6 @@ export const az = {
           "React",
           "Next.js",
           "Tailwind CSS",
-          "Node.js",
-          "MongoDB",
         ],
       },
       {
