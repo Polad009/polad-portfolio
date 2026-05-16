@@ -35,34 +35,24 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: `You are a professional assistant on Polad Balakishiyev's portfolio. Respond to: ${userMessage}`
-                  }
-                ]
-              }
-            ]
-          })
-        }
-      );
+      const history = messages.map((msg) => ({
+        role: msg.role,
+        parts: [{ text: msg.text }],
+      }));
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMessage, history }),
+      });
 
       const data = await response.json();
-      console.log("Gemini API Data:", data);
       
-      const reply = data.candidates[0].content.parts[0].text;
-      setMessages((prev) => [...prev, { role: "model", text: reply }]);
+      if (!response.ok) throw new Error(data.error || "Failed");
+
+      setMessages((prev) => [...prev, { role: "model", text: data.reply }]);
     } catch (error) {
-      console.error("Gemini Error:", error);
+      console.error("Chat Error:", error);
       setMessages((prev) => [
         ...prev,
         { 
