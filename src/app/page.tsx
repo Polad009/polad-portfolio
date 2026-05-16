@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/Projects";
 import CertificationsSection from "@/components/Certifications";
 import SkillsSection from "@/components/Skills";
 import ContactSection from "@/components/Contact";
+import Chatbot from "@/components/Chatbot";
 import { useSoundEngine } from "@/hooks/useSoundEngine";
 import { useLanguage } from "@/context/LanguageContext";
 import Lenis from "lenis";
@@ -103,6 +104,8 @@ export default function Home() {
           </button>
         )}
       </div>
+
+      <Chatbot />
 
       {/* Main content */}
       <main>
