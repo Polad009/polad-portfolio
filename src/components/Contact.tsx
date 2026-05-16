@@ -50,14 +50,14 @@ export default function ContactSection() {
       <div className="max-w-[1400px] w-full mx-auto">
         <div className="overflow-hidden mb-20">
           <h2
-            className="contact-heading text-[clamp(2.5rem,7vw,8rem)] font-bold text-white/90 leading-[0.95] tracking-[-0.03em] uppercase"
+            className="contact-heading text-[clamp(2.5rem,7vw,8rem)] font-bold text-white leading-[0.95] tracking-[-0.03em] uppercase"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {t.contact.title.split(" ").map((word, i) => (
               <span key={i} className="block">{word}</span>
             ))}
           </h2>
-          <p className="contact-link text-white/40 font-light mt-8 text-lg">
+          <p className="contact-link text-white/70 font-light mt-8 text-lg">
             {t.contact.description}
           </p>
         </div>
@@ -69,13 +69,13 @@ export default function ContactSection() {
               href={link.href}
               target={link.label === t.contact.email ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className="contact-link group border-t border-white/[0.06] py-6 md:py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 transition-colors duration-500 hover:border-white/20"
+              className="contact-link group border-t border-white/[0.1] py-6 md:py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 transition-colors duration-500 hover:border-white/30"
               data-hover
             >
-              <span className="text-[10px] tracking-[0.3em] text-white/20 uppercase group-hover:text-white/40 transition-colors duration-500">
+              <span className="text-[10px] tracking-[0.3em] text-white/50 uppercase group-hover:text-white/80 transition-colors duration-500">
                 {link.label}
               </span>
-              <span className="text-sm sm:text-base text-white/40 group-hover:text-white/80 transition-colors duration-500 font-light flex items-center gap-3">
+              <span className="text-sm sm:text-base text-white/80 group-hover:text-white transition-colors duration-500 font-light flex items-center gap-3">
                 {link.value}
                 <svg
                   width="12"
@@ -91,12 +91,12 @@ export default function ContactSection() {
               </span>
             </a>
           ))}
-          <div className="border-t border-white/[0.06]" />
+          <div className="border-t border-white/[0.1]" />
         </div>
 
         {/* Footer */}
         <div className="mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <span className="text-[10px] tracking-[0.2em] text-white/15 uppercase">
+          <span className="text-[10px] tracking-[0.2em] text-white/30 uppercase">
             {t.footer.copyright}
           </span>
         </div>

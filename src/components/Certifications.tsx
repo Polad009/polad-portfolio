@@ -32,7 +32,7 @@ export default function CertificationsSection() {
   return (
     <section ref={sectionRef} className="section-full flex-col justify-center px-6 md:px-16 lg:px-24">
       <div className="max-w-[1400px] w-full mx-auto">
-        <span className="cert-item text-[10px] tracking-[0.3em] text-white/25 uppercase block mb-16">
+        <span className="cert-item text-[10px] tracking-[0.3em] text-white/60 uppercase block mb-16">
           {t.certifications.title}
         </span>
 
@@ -40,25 +40,25 @@ export default function CertificationsSection() {
           {t.certifications.items.map((cert, i) => (
             <div
               key={i}
-              className="cert-item group border-t border-white/[0.06] py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+              className="cert-item group border-t border-white/[0.1] py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
             >
               <div className="flex items-baseline gap-6">
-                <span className="text-sm md:text-base font-mono text-white/15 tracking-wider">
+                <span className="text-sm md:text-base font-mono text-white/30 tracking-wider">
                   {cert.name.match(/\((.*?)\)/)?.[1] || "CERT"}
                 </span>
                 <h3
-                  className="text-xl sm:text-2xl md:text-3xl font-medium text-white/70 group-hover:text-white/90 transition-colors duration-500 tracking-[-0.01em]"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white group-hover:text-white transition-colors duration-500 tracking-[-0.01em]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {cert.name.replace(/\((.*?)\)/, "").trim()}
                 </h3>
               </div>
-              <span className="text-xs tracking-[0.2em] text-white/20 uppercase md:text-right">
+              <span className="text-xs tracking-[0.2em] text-white/50 uppercase md:text-right">
                 {cert.issuer}
               </span>
             </div>
           ))}
-          <div className="border-t border-white/[0.06]" />
+          <div className="border-t border-white/[0.1]" />
         </div>
       </div>
     </section>

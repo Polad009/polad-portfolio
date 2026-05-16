@@ -92,7 +92,7 @@ export const en = {
     title: "Get In Touch",
     subtitle: "Let's connect",
     description:
-      "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+      "Let's talk about what we can create together. Reach out for data analytics, frontend projects, or just to exchange ideas.",
     email: "Email",
     github: "GitHub",
     linkedin: "LinkedIn",
@@ -100,6 +100,6 @@ export const en = {
   },
   footer: {
     copyright: "© 2026 Polad Balakishiyev",
-    madeWith: "Built with Next.js & Framer Motion",
+    madeWith: "",
   },
 };

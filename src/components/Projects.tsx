@@ -40,20 +40,20 @@ export default function ProjectsSection() {
             {/* Number + Type */}
             <div className="proj-anim flex items-baseline gap-6 mb-6">
               <span
-                className="text-[clamp(4rem,10vw,8rem)] font-bold text-white/[0.04] leading-none tracking-[-0.05em]"
+                className="text-[clamp(4rem,10vw,8rem)] font-bold text-white/[0.08] leading-none tracking-[-0.05em]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 №{project.number}
               </span>
               <div className="flex items-center gap-4">
-                <span className="text-[10px] tracking-[0.3em] text-white/25 uppercase">
+                <span className="text-[10px] tracking-[0.3em] text-white/60 uppercase">
                   {project.type}
                 </span>
                 <span
                   className={`text-[10px] tracking-[0.2em] uppercase ${
                     project.status === "Live" || project.status === "Canlı"
-                      ? "text-green-400/60"
-                      : "text-white/20"
+                      ? "text-green-400"
+                      : "text-white/40"
                   }`}
                 >
                   ● {project.status}
@@ -64,7 +64,7 @@ export default function ProjectsSection() {
             {/* Name */}
             <div className="overflow-hidden mb-8">
               <h2
-                className="proj-anim text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/90 tracking-[-0.02em] leading-[1.05]"
+                className="proj-anim text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-[-0.02em] leading-[1.05]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {project.name}
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
             </div>
 
             {/* Description */}
-            <p className="proj-anim text-base md:text-lg text-white/35 font-light leading-relaxed max-w-2xl">
+            <p className="proj-anim text-base md:text-lg text-white/75 font-light leading-relaxed max-w-2xl">
               {project.description}
             </p>
 
@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="proj-anim inline-flex items-center gap-3 mt-10 text-sm tracking-[0.15em] text-white/40 hover:text-white/80 uppercase transition-colors duration-500 group"
+                className="proj-anim inline-flex items-center gap-3 mt-10 text-sm tracking-[0.15em] text-white/80 hover:text-white uppercase transition-colors duration-500 group"
                 data-hover
               >
                 {t.projects.viewProject}

@@ -89,10 +89,10 @@ export const az = {
     ],
   },
   contact: {
-    title: "Əlaqə Saxlayın",
+    title: "Əlaqə",
     subtitle: "Əlaqə",
     description:
-      "Əlaqə saxlamaqdan məmnun olaram.",
+      "Birlikdə nələr yarada biləcəyimizi danışaq. Data analitikası, frontend layihələri və ya sadəcə fikir mübadiləsi üçün əlaqə saxlayın.",
     email: "Email",
     github: "GitHub",
     linkedin: "LinkedIn",

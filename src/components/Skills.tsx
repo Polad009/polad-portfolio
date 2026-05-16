@@ -49,15 +49,15 @@ export default function SkillsSection() {
   return (
     <section ref={sectionRef} className="section-full flex-col justify-center px-6 md:px-16 lg:px-24 overflow-hidden">
       <div className="max-w-[1400px] w-full mx-auto">
-        <span className="skills-label text-[10px] tracking-[0.3em] text-white/25 uppercase block mb-16">
+        <span className="skills-label text-[10px] tracking-[0.3em] text-white/60 uppercase block mb-16">
           {t.skills.title}
         </span>
 
-        <div ref={trackRef} className="flex flex-wrap gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-4 sm:gap-y-6">
+        <div ref={trackRef} className="flex flex-wrap gap-4 md:gap-6">
           {allSkills.map((skill, i) => (
             <span
               key={i}
-              className="skill-word text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white/[0.12] hover:text-white/60 transition-colors duration-700 tracking-[-0.01em] cursor-default"
+              className="skill-word px-6 py-3 border border-white/20 rounded-full text-base md:text-lg lg:text-xl font-medium text-white hover:bg-white hover:text-black hover:border-white transition-all duration-500 cursor-default shadow-[0_0_15px_rgba(255,255,255,0)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
               style={{ fontFamily: "var(--font-display)", perspective: "400px" }}
               data-hover
             >

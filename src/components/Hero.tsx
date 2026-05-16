@@ -85,7 +85,7 @@ export default function HeroSection() {
         <div className="overflow-hidden mt-6 md:mt-8">
           <p
             ref={roleRef}
-            className="text-sm sm:text-base md:text-lg tracking-[0.15em] text-white/40 uppercase font-light"
+            className="text-sm sm:text-base md:text-lg tracking-[0.15em] text-white/70 uppercase font-light"
           >
             {t.hero.role}
           </p>

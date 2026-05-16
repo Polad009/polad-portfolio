@@ -56,23 +56,23 @@ export default function AboutSection() {
         {/* Content */}
         <div className="md:col-span-9 md:pt-8">
           <div className="mb-8">
-            <span className="about-line text-[10px] tracking-[0.3em] text-white/25 uppercase block mb-6">
+            <span className="about-line text-[10px] tracking-[0.3em] text-white/50 uppercase block mb-6">
               Haqqımda / About
             </span>
           </div>
 
-          <p className="about-line text-lg sm:text-xl md:text-2xl leading-relaxed text-white/50 font-light max-w-3xl mb-8">
+          <p className="about-line text-lg sm:text-xl md:text-2xl leading-relaxed text-white/80 font-light max-w-3xl mb-8">
             {t.about.text}
           </p>
 
           <div className="about-line mt-12 flex gap-12">
             <div>
-              <span className="text-[10px] tracking-[0.2em] text-white/20 uppercase block mb-2">University</span>
-              <span className="text-sm text-white/50 font-light">{t.about.university}</span>
+              <span className="text-[10px] tracking-[0.2em] text-white/40 uppercase block mb-2">University</span>
+              <span className="text-sm text-white/70 font-light">{t.about.university}</span>
             </div>
             <div>
-              <span className="text-[10px] tracking-[0.2em] text-white/20 uppercase block mb-2">Field</span>
-              <span className="text-sm text-white/50 font-light">{t.about.degree}</span>
+              <span className="text-[10px] tracking-[0.2em] text-white/40 uppercase block mb-2">Field</span>
+              <span className="text-sm text-white/70 font-light">{t.about.degree}</span>
             </div>
           </div>
         </div>
