@@ -37,6 +37,7 @@ export const az = {
           "KPI-lərlə interaktiv satış analizi dashboardu (ümumi satış: 1,984,464, gəlir: 60,126, ort: 1,016). Məhsul performans cədvəli, kateqoriyaya görə pasta diaqramı (Texnologiya 37%, Ofis Ləvazimatları 34%, Mebel 28%), müştəri seqmenti bar diaqramı, aylıq trend xətti və regional endirim bölgüsü.",
         status: "Tamamlanıb",
         link: null,
+        image: null,
       },
       {
         number: "02",
@@ -46,6 +47,17 @@ export const az = {
           "Q1–Q5 xalları üzrə müştəri məmnuniyyəti təhlili (ort 3.66–3.78). Yerə, brendə, modelə və tarixə görə interaktiv filtrlər. Ölçü diaqramı (Ümumi Xal: 3.78), reytinqli müştəri məlumat cədvəli və ulduz reytinqi paylanması. Alətlər: Power BI, Excel.",
         status: "Canlı",
         link: "https://www.linkedin.com/posts/polad-balakishiyev_powerbi-dataanalytics-opentowork-share-7444112147179118592-BVx_",
+        image: null,
+      },
+      {
+        number: "03",
+        name: "Belgian Chocolate & Coffee",
+        type: "CAFE WEB SAYT",
+        description:
+          "Sumqayıtda yerləşən premium Belçika şokoladı və qəhvə kafesi üçün hazırlanmış veb sayt.",
+        status: "Development mərhələsində",
+        link: "https://coffee-shop-belgium.vercel.app/",
+        image: "/belgian.png",
       },
     ],
   },

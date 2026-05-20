@@ -37,6 +37,7 @@ export const en = {
           "Interactive sales analysis dashboard with KPIs (total sales: 1,984,464, revenue: 60,126, avg: 1,016). Features product performance table, pie chart by category (Technology 37%, Office Supplies 34%, Furniture 28%), customer segment bar chart, monthly trend line, and regional discount breakdown.",
         status: "Completed",
         link: null,
+        image: null,
       },
       {
         number: "02",
@@ -46,6 +47,17 @@ export const en = {
           "Customer satisfaction analysis across Q1–Q5 scores (avg 3.66–3.78). Includes interactive filters by location, brand, model and date. Features a gauge chart (Total Score: 3.78), customer data table with ratings, and star-rating distribution. Tools: Power BI, Excel.",
         status: "Live",
         link: "https://www.linkedin.com/posts/polad-balakishiyev_powerbi-dataanalytics-opentowork-share-7444112147179118592-BVx_",
+        image: null,
+      },
+      {
+        number: "03",
+        name: "Belgian Chocolate & Coffee",
+        type: "CAFE WEBSITE",
+        description:
+          "A website designed for a premium Belgian chocolate and coffee cafe located in Sumgait.",
+        status: "In Development",
+        link: "https://coffee-shop-belgium.vercel.app/",
+        image: "/belgian.png",
       },
     ],
   },
